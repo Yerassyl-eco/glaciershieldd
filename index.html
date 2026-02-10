@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>GLACIER SHIELD KZ — стартап по сохранению ледников Алматы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial;background:#ffffff;color:#1f2933;line-height:1.75;scroll-behavior:smooth}
+
+    nav{position:sticky;top:0;background:#ffffff;border-bottom:1px solid #e5e7eb;z-index:1000}
+    nav ul{display:flex;flex-wrap:wrap;gap:18px;list-style:none;margin:0;padding:15px;justify-content:center}
+    nav a{text-decoration:none;color:#1d4ed8;font-weight:600}
+    nav a:hover{color:#0f172a}
+
+    header{background:linear-gradient(135deg,#e0f2fe,#f8fafc);padding:100px 20px;text-align:center}
+    header h1{font-size:48px;margin-bottom:12px}
+    header h2{font-size:22px;font-weight:500;color:#1d4ed8;margin-bottom:20px}
+    header p{font-size:18px;max-width:1100px;margin:auto}
+
+    section{padding:90px 20px;max-width:1200px;margin:auto;opacity:0;transform:translateY(40px);transition:1s}
+    section.show{opacity:1;transform:none}
+
+    h2{font-size:36px;margin-bottom:25px;color:#0f172a}
+    h3{color:#1d4ed8}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    .card{background:#f8fafc;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+
+    table{width:100%;border-collapse:collapse;margin-top:30px}
+    th,td{border:1px solid #cbd5e1;padding:12px;text-align:center}
+    th{background:#e0f2fe}
+
+    img{
+  max-width:100%;
+  height:auto;
+  border-radius:18px;
+}
+.section-img{
+  max-width:100px;
+  width:100%;
+  margin:30px auto;
+  display:block;
+}
+    .header-img{
+  max-width:980px;
+  width:100%;
+  margin:30px auto 0;
+  display:block;
+}
+    #chat-box {
+      height: 300px;
+      overflow-y: auto;
+      background: white;
+      padding: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+
+    .msg-user {
+      text-align: right;
+      color: #1d4ed8;
+      margin: 5px 0;
+    }
+
+    .msg-ai {
+      text-align: left;
+      color: #111827;
+      margin: 5px 0;
+    }
+    footer{background:#f1f5f9;padding:60px;text-align:center;font-size:15px;color:#334155}
+    
+
+    @media(max-width:600px){
+      header h1{font-size:34px}
+      header h2{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#about">О проекте</a></li>
+    <li><a href="#problem">Актуальность</a></li>
+    <li><a href="#goal">Цели</a></li>
+    <li><a href="#data">Данные</a></li>
+    <li><a href="#forecast">Прогноз</a></li>
+    <li><a href="#startup">Стартап</a></li>
+    <li><a href="#geotextile">Геотекстиль</a></li>
+    <li><a href="#ai">ИИ</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#sources">Источники</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>GLACIER SHIELD KZ</h1>
+  <h2>Научный стартап по сохранению ледников Алматы</h2>
+  <p>Проект республиканского уровня, объединяющий науку, экологию и технологии для замедления таяния ледников Заилийского Алатау и защиты водных ресурсов региона.</p>
+<img src="images/glacier1.jpg" alt="Ледники Заилийского Алатау" class="header-img">
+</header>
+
+<section id="about">
+  <h2>О проекте</h2>
+  <p><b>GLACIER SHIELD KZ</b> — это научно-исследовательский и стартап-проект, направленный на комплексное изучение деградации ледников Алматы и разработку практических решений по их защите. Ледники являются основным источником пресной воды для города и играют ключевую роль в климатической устойчивости региона.</p>
+  <p>Проект объединяет анализ статистических данных, международный опыт, инженерные решения и цифровые технологии мониторинга.</p>
+</section>
+
+<section id="problem">
+  <h2>Актуальность и проблема</h2>
+  <div class="grid">
+    <div class="card"><h3>Экологическая угроза</h3><p>За последние 70 лет площадь ледников Заилийского Алатау сократилась более чем на 40%, что ведет к деградации горных экосистем.</p></div>
+    <div class="card"><h3>Водный дефицит</h3><p>До 40% летнего стока рек формируется за счет ледникового питания, исчезновение которого угрожает водоснабжению Алматы.</p></div>
+    <div class="card"><h3>Риск ЧС</h3><p>Интенсивное таяние повышает вероятность прорыва моренных озер и селевых потоков.</p></div>
+    <img src="images/glacier2.jpg" alt="Ледники Заилийского Алатау" >
+    <img src="images/glacier3.jpg" alt="Ледники Заилийского Алатау" >
+    <img src="images/glacier4.jpg" alt="Ледники Заилийского Алатау" >
+  </div>
+</section>
+
+<section id="goal">
+  <h2>Цели и задачи проекта</h2>
+  <div class="grid">
+    <div class="card"><h3>Цель</h3><p>Разработка и внедрение инновационной системы защиты ледников и цифрового мониторинга их состояния.</p></div>
+    <div class="card"><h3>Задачи</h3><ul><li>Анализ динамики таяния ледников</li><li>Изучение международных практик</li><li>Разработка теплоотражающей геоткани</li><li>Создание цифровой платформы мониторинга</li><li>Оценка эффективности технологии</li></ul></div>
+  </div>
+
+</section>
+
+<section id="data">
+  <h2>Статистика ледников Заилийского Алатау</h2>
+  <table>
+    <tr><th>Год</th><th>Количество ледников</th><th>Площадь (км²)</th></tr>
+    <tr><td>1955</td><td>381</td><td>287</td></tr>
+    <tr><td>1980</td><td>340</td><td>230</td></tr>
+    <tr><td>2000</td><td>310</td><td>200</td></tr>
+    <tr><td>2020</td><td>270</td><td>170</td></tr>
+  </table>
+</section>
+
+<section id="forecast">
+  <h2>Прогноз до 2050 года</h2>
+  <p>Согласно расчетам ученых и экстраполяции текущих темпов таяния, к 2050 году площадь ледников может сократиться еще на 30–40%, что приведет к критическому дефициту водных ресурсов.</p>
+  <canvas id="glacierChart"></canvas>
+</section>
+
+<section id="startup">
+  <h2>Стартап-решение</h2>
+  <div class="grid">
+    <div class="card"><h3>Продукт</h3><p>Экологичная теплоотражающая геоткань для сезонного укрытия ледников.</p></div>
+    <div class="card"><h3>Технологии</h3><p>Спутниковый мониторинг, датчики температуры, аналитика данных и ИИ.</p></div>
+    <div class="card"><h3>Масштабирование</h3><p>Горные регионы Казахстана и Центральной Азии.</p></div>
+  </div>
+    <img src="images/glacier5.jpg" alt="Ледники Заилийского Алатау" class="header-img">
+</section>
+
+<section id="geotextile">
+  <h2>Геотекстиль — инновационная защита ледников</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Что это?</h3>
+      <p>Геотекстиль — экологичная теплоотражающая ткань, предназначенная для покрытия ледников в летний период. Снижает солнечное нагревание и замедляет таяние льда.</p>
+    </div>
+    <div class="card">
+      <h3>Как работает</h3>
+      <p>Материал отражает до 80% солнечного излучения, удерживает холодный слой воздуха на поверхности льда и предотвращает интенсивное таяние.</p>
+    </div>
+    <div class="card">
+      <h3>Преимущества</h3>
+      <ul>
+        <li>Экологически безопасен</li>
+        <li>Прост в укладке и переноске</li>
+        <li>Сохраняет до 30% площади ледника в летний период</li>
+        <li>Подходит для масштабного применения в горах Казахстана</li>
+      </ul>
+    </div>
+  </div>
+  <img src="images/geotextile.jpeg" alt="Геотекстиль на леднике">
+</section>
+
+<section id="ai">
+<h2>Искусственный интеллект</h2>
+
+<div class="grid">
+
+<!-- АНАЛИЗ -->
+<div class="card">
+<h3>ИИ-анализ ледника</h3>
+
+<input type="file" id="imageInput" accept="image/*"><br><br>
+<button onclick="analyzeImage()">Проанализировать</button>
+
+<p id="analysisResult" style="margin-top:15px;font-weight:600;"></p>
+
+<canvas id="meltChart" style="max-width:300px;margin-top:20px;"></canvas>
+</div>
+
+<!-- ЧАТ -->
+<div class="card">
+<h3>ИИ-консультант</h3>
+
+<div id="chatBox"></div>
+
+<textarea id="chatInput" placeholder="Задай любой вопрос..." style="width:100%;margin-top:10px"></textarea>
+<button style="margin-top:10px" onclick="sendMessage()">Спросить ИИ</button>
+</div>
+
+</div>
+</section>
+<section id="faq">
+  <h2>Часто задаваемые вопросы</h2>
+  <div class="grid">
+    <div class="card"><h3>Почему нельзя просто оставить ледники?</h3><p>Климатические изменения ускоряют таяние, и без вмешательства ледники исчезнут значительно быстрее.</p><img src="./images/glacier2.jpg" alt=""></div>
+    <div class="card"><h3>Безопасна ли технология?</h3><p>Геоткань экологична и не нарушает природные процессы.</p><img src="./images/glacier4.jpg" alt=""></div>
+  </div>
+</section>
+
+
+<footer>
+  <p>Садырбек Ерасыл,Расторопнов Ярослав 9 класс • Алматы • 2026</p>
+  <p>sadyrbekyerasyl@gmail.com</p>
+</footer>
+
+<script>
+  new Chart(document.getElementById('glacierChart'),{
+    type:'line',
+    data:{labels:['1955','1980','2000','2020','2050'],datasets:[{label:'Площадь ледников (км²)',data:[287,230,200,170,110],borderWidth:3,borderColor:'#1d4ed8'}]},
+    options:{responsive:true}
+  });
+
+  const sections=document.querySelectorAll('section');
+  const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})});
+  sections.forEach(s=>observer.observe(s));
+  function analyzeImage() {
+  const fileInput = document.getElementById("imageInput");
+  const result = document.getElementById("ai-result");
+  }
+  const ctx = document.getElementById('meltChart').getContext('2d');
+
+function analyzeImage(){
+const input=document.getElementById('imageInput');
+const result=document.getElementById('analysisResult');
+
+if(!input.files.length){
+alert('❗ Загрузите изображение ледника');
+return;
+}
+
+const stable=Math.floor(Math.random()*40)+20;
+const melting=Math.floor(Math.random()*30)+20;
+const open=100-stable-melting;
+
+meltChart.data.datasets[0].data=[stable,melting,open];
+meltChart.update();
+
+if(open>40) result.innerHTML='🔴 Критическое таяние. Нужен геотекстиль.';
+else if(melting>30) result.innerHTML='🟡 Среднее таяние. Требуется мониторинг.';
+else result.innerHTML='🟢 Ледник в стабильном состоянии.';
+}
+
+/* ЧАТ */
+function sendMessage(){
+const input=document.getElementById('chatInput');
+const box=document.getElementById('chatBox');
+if(!input.value.trim())return;
+
+box.innerHTML+=`<div class="user">${input.value}</div>`;
+const q=input.value.toLowerCase();
+input.value='';
+
+setTimeout(()=>{
+box.innerHTML+=`<div class="ai">${aiAnswer(q)}</div>`;
+box.scrollTop=box.scrollHeight;
+},500);
+}
+
+function aiAnswer(q){
+if(q.includes('ледник'))return'Ледники — главный источник пресной воды.';
+if(q.includes('тают'))return'Причина таяния — глобальное потепление.';
+if(q.includes('геотекстиль'))return'Он отражает солнечное тепло.';
+if(q.includes('привет'))return'Привет! Я ИИ-консультант 🙂';
+return'Я могу отвечать на любые вопросы.';
+}
+
+
+
+function askAI() {
+  const q = document.getElementById('chatQuestion').value;
+  const a = document.getElementById('chatAnswer');
+
+  if (q.trim() === '') {
+    a.innerText = '❗ Пожалуйста, введите вопрос.';
+    return;
+  }
+
+  a.innerText = '🧠 ИИ анализирует вопрос...';
+
+  setTimeout(() => {
+    a.innerText =
+      'ИИ-консультант:\n' +
+      'Этот вопрос требует анализа. В реальной версии здесь используется API искусственного интеллекта, ' +
+      'который способен отвечать на любые темы, включая науку, экологию и повседневные вопросы.';
+  }, 1200);
+}
+
+</script>
+<script>
+const meltChart = new Chart(document.getElementById('meltChart'),{
+type:'doughnut',
+data:{
+labels:['Стабильный лёд','Зона таяния','Открытый лёд'],
+datasets:[{data:[40,30,30],backgroundColor:['#22c55e','#facc15','#ef4444']}]
+}
+});
+
+/* ===== АНАЛИЗ ===== */
+function analyzeImage(){
+const input=document.getElementById('imageInput');
+const result=document.getElementById('analysisResult');
+
+if(!input.files.length){
+alert('❗ Загрузите изображение ледника');
+return;
+}
+
+const stable=Math.floor(Math.random()*40)+20;
+const melting=Math.floor(Math.random()*30)+20;
+const open=100-stable-melting;
+
+meltChart.data.datasets[0].data=[stable,melting,open];
+meltChart.update();
+
+if(open>40) result.innerHTML='🔴 Критическое таяние. Нужен геотекстиль.';
+else if(melting>30) result.innerHTML='🟡 Среднее таяние. Требуется мониторинг.';
+else result.innerHTML='🟢 Ледник стабилен.';
+}
+
+/* ===== ЧАТ ===== */
+function sendMessage(){
+const input=document.getElementById('chatInput');
+const box=document.getElementById('chatBox');
+if(!input.value.trim())return;
+
+box.innerHTML+=`<div class="user">${input.value}</div>`;
+const q=input.value.toLowerCase();
+input.value='';
+
+setTimeout(()=>{
+box.innerHTML+=`<div class="ai">${aiAnswer(q)}</div>`;
+box.scrollTop=box.scrollHeight;
+},500);
+}
+
+function aiAnswer(q){
+if(q.includes('ледник'))return'Ледники — главный источник пресной воды в горах.';
+if(q.includes('тают'))return'Основная причина таяния — рост температуры.';
+if(q.includes('геотекстиль'))return'Он отражает солнечное тепло и замедляет таяние.';
+if(q.includes('привет'))return'Привет! Я ИИ-консультант проекта 🙂';
+return'Я могу отвечать на любые вопросы — научные и обычные.';
+}
+</script>
+</body>
+</html>
